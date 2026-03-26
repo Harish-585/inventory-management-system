@@ -37,5 +37,5 @@ This project is developed using Spring Boot to manage inventory efficiently. It 
 3. Run the application
 4. Open browser: http://localhost:8080
 
-## 👨‍💻 Author
+## 👨‍💻 Done by
 Harish

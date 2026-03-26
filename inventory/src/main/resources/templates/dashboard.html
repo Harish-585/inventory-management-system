@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6f9;
+        }
+
+        .navbar {
+            background: #2c5364;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .card h5 {
+            font-weight: bold;
+        }
+
+        .card-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background: #2c5364;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background: #1a2f3a;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg px-3 d-flex justify-content-between" style="background:#2c5364;">
+
+    <!-- Left side -->
+    <span class="navbar-brand text-white fw-bold">
+        Inventory Control Panel
+    </span>
+
+    <!-- Right side (Logout) -->
+    <a href="/logout" class="btn btn-danger">Logout</a>
+
+</nav>
+<div class="container mt-4">
+
+    <!-- CARDS -->
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card p-3 bg-primary text-white">
+                <h5>Total Products</h5>
+                <div class="card-value" th:text="${totalProducts}">0</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 bg-success text-white">
+                <h5>Total Value</h5>
+                <div class="card-value">₹ <span th:text="${totalValue}">0</span></div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 bg-danger text-white">
+                <h5>Low Stock</h5>
+                <div class="card-value" th:text="${lowStock}">0</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="mt-4 text-center">
+        <a href="/products" class="btn btn-custom m-2">View Products</a>
+        <a href="/add-product" class="btn btn-success m-2">Add Product</a>
+        <a href="/export/csv" class="btn btn-info m-2">Download CSV</a>
+    </div>
+    <div class="text-center mt-5">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+             style="width:180px; margin-bottom:15px;">
+
+        <h4 style="color:#2c5364;">Welcome to Inventory Management System</h4>
+
+        <p style="color:gray;">
+            Track stock • Manage products • Generate reports
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

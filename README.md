@@ -1,6 +1,6 @@
 # inventory-management-system
 Inventory Management System using SpringBoot
-# Inventory Management System
+
 
 ## 📌 Project Overview
 This project is developed using Spring Boot to manage inventory efficiently. It helps in tracking products, stock levels, and generating analytical  reports.It ensures efficient inventory tracking,reduce manual errors, and enhances decision-making using real-time insights.
